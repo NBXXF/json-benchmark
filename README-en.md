@@ -1,12 +1,12 @@
-**[English](README.md)** | 简体中文
+English | **[简体中文](README.md)**
 
 # json-benchmark
-- 通过 Jetpack Microbenchmark 库进行基准测试，以避免 CPU 降频，JIT 优化对测试结果的影响
-- 测试用例输入包括 12kb, 78kb,238kb 大小的三个 json 文件，以测试 json 大小对反序列化速度的影响
-- 测试结果分为多次运行充分预热后的结果
+- Use the Jetpack Microbenchmark library for benchmark testing to avoid the impact of CPU frequency reduction and JIT optimization on test results.
+- The test case input includes three json files of size 12kb, 78kb, and 238kb to test the impact of json size on deserialization speed.
+- The test results are divided into the results after multiple runs and sufficient preheating.
 
-## 测试结果
-### 多次运行测试结果
+## Test results
+### Multi-run test results
 |                      | small json    | medium json    | large json    |
 |----------------------|---------------|----------------|---------------|
 | gsonAutoAdapter      | 248708     ns | 1617912 ns     | 4360885    ns |
@@ -22,6 +22,4 @@
 ![](img/jsonpk.png)
 
 ## Gson-Code-gen
-- gson 自动生成TypeAdapter 速度最快,杜绝了反射 请参考[gson_plugin](https://github.com/NBXXF/gson_plugin)
-
-
+- gson automatically generates TypeAdapter, which is the fastest and eliminates reflection. Please refer to [gson_plugin](https://github.com/NBXXF/gson_plugin)
